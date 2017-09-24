@@ -1,14 +1,15 @@
 import './vendor.ts';
+import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
-import { WebSharedModule, UserRouteAccessService } from './shared';
-import { WebHomeModule } from './home/home.module';
-import { WebAdminModule } from './admin/admin.module';
-import { WebAccountModule } from './account/account.module';
-import { WebEntityModule } from './entities/entity.module';
+import { GateSharedModule, UserRouteAccessService } from './shared';
+import { GateHomeModule } from './home/home.module';
+import { GateAdminModule } from './admin/admin.module';
+import { GateAccountModule } from './account/account.module';
+import { GateEntityModule } from './entities/entity.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -31,11 +32,11 @@ import {
         BrowserModule,
         LayoutRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
-        WebSharedModule,
-        WebHomeModule,
-        WebAdminModule,
-        WebAccountModule,
-        WebEntityModule,
+        GateSharedModule,
+        GateHomeModule,
+        GateAdminModule,
+        GateAccountModule,
+        GateEntityModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
@@ -54,4 +55,4 @@ import {
     ],
     bootstrap: [ JhiMainComponent ]
 })
-export class WebAppModule {}
+export class GateAppModule {}

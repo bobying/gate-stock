@@ -2,9 +2,10 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 import {
-    WebSharedLibsModule,
-    WebSharedCommonModule,
+    GateSharedLibsModule,
+    GateSharedCommonModule,
     CSRFService,
+    AuthServerProvider,
     AccountService,
     UserService,
     StateStorageService,
@@ -17,8 +18,8 @@ import {
 
 @NgModule({
     imports: [
-        WebSharedLibsModule,
-        WebSharedCommonModule
+        GateSharedLibsModule,
+        GateSharedCommonModule
     ],
     declarations: [
         JhiLoginModalComponent,
@@ -31,12 +32,13 @@ import {
         StateStorageService,
         Principal,
         CSRFService,
+        AuthServerProvider,
         UserService,
         DatePipe
     ],
     entryComponents: [JhiLoginModalComponent],
     exports: [
-        WebSharedCommonModule,
+        GateSharedCommonModule,
         JhiLoginModalComponent,
         HasAnyAuthorityDirective,
         DatePipe
@@ -44,4 +46,4 @@ import {
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
-export class WebSharedModule {}
+export class GateSharedModule {}

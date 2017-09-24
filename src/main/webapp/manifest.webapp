@@ -1,6 +1,6 @@
 {
-  "name": "Web",
-  "short_name": "Web",
+  "name": "Gate",
+  "short_name": "Gate",
   "icons": [
       {
           "src": "./content/images/logo-jhipster.png",

@@ -7,10 +7,10 @@ export class AccountService  {
     constructor(private http: Http) { }
 
     get(): Observable<any> {
-        return this.http.get('api/account').map((res: Response) => res.json());
+        return this.http.get('uaa/api/account').map((res: Response) => res.json());
     }
 
     save(account: any): Observable<Response> {
-        return this.http.post('api/account', account);
+        return this.http.post('uaa/api/account', account);
     }
 }

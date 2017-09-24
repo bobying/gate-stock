@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { WebSharedModule } from '../shared';
+import { GateSharedModule } from '../shared';
 /* jhipster-needle-add-admin-module-import - JHipster will add admin modules imports here */
 
 import {
@@ -24,6 +24,8 @@ import {
     JhiConfigurationService,
     JhiHealthService,
     JhiMetricsService,
+    GatewayRoutesService,
+    JhiGatewayComponent,
     LogsService,
     UserResolvePagingParams,
     UserResolve,
@@ -32,7 +34,7 @@ import {
 
 @NgModule({
     imports: [
-        WebSharedModule,
+        GateSharedModule,
         RouterModule.forRoot(adminState, { useHash: true }),
         /* jhipster-needle-add-admin-module - JHipster will add admin modules here */
     ],
@@ -49,6 +51,7 @@ import {
         JhiHealthCheckComponent,
         JhiHealthModalComponent,
         JhiDocsComponent,
+        JhiGatewayComponent,
         JhiMetricsMonitoringComponent,
         JhiMetricsMonitoringModalComponent
     ],
@@ -63,6 +66,7 @@ import {
         JhiConfigurationService,
         JhiHealthService,
         JhiMetricsService,
+        GatewayRoutesService,
         LogsService,
         UserResolvePagingParams,
         UserResolve,
@@ -70,4 +74,4 @@ import {
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class WebAdminModule {}
+export class GateAdminModule {}

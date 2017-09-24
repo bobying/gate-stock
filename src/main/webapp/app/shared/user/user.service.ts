@@ -8,7 +8,7 @@ import { createRequestOption } from '../model/request-util';
 
 @Injectable()
 export class UserService {
-    private resourceUrl = 'api/users';
+    private resourceUrl = 'uaa/api/users';
 
     constructor(private http: Http) { }
 
@@ -37,7 +37,10 @@ export class UserService {
     }
 
     authorities(): Observable<string[]> {
-        return Observable.of(['ROLE_USER', 'ROLE_ADMIN']);
+        return this.http.get('uaa/api/users/authorities').map((res: Response) => {
+            const json = res.json();
+            return <string[]> json;
+        });
     }
 
     private convertResponse(res: Response): ResponseWrapper {

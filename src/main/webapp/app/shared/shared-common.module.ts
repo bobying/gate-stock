@@ -2,7 +2,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import {
-    WebSharedLibsModule,
+    GateSharedLibsModule,
     JhiLanguageHelper,
     FindLanguageFromKeyPipe,
     JhiAlertComponent,
@@ -11,7 +11,7 @@ import {
 
 @NgModule({
     imports: [
-        WebSharedLibsModule
+        GateSharedLibsModule
     ],
     declarations: [
         FindLanguageFromKeyPipe,
@@ -27,10 +27,10 @@ import {
         },
     ],
     exports: [
-        WebSharedLibsModule,
+        GateSharedLibsModule,
         FindLanguageFromKeyPipe,
         JhiAlertComponent,
         JhiAlertErrorComponent
     ]
 })
-export class WebSharedCommonModule {}
+export class GateSharedCommonModule {}

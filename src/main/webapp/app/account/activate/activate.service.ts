@@ -11,7 +11,7 @@ export class ActivateService {
         const params: URLSearchParams = new URLSearchParams();
         params.set('key', key);
 
-        return this.http.get('api/activate', {
+        return this.http.get('uaa/api/activate', {
             search: params
         }).map((res: Response) => res);
     }
