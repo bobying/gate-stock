@@ -1,0 +1,57 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="mySourceLabel" jhiTranslate="gateApp.source.home.createOrEditLabel">Create or edit a Source</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!source.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="source.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.source.date" for="field_date">Date</label>
+            <div class="d-flex">
+                <input id="field_date" type="datetime-local" class="form-control" name="date" [(ngModel)]="source.date"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.source.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                [(ngModel)]="source.title"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.source.desc" for="field_desc">Desc</label>
+            <textarea class="form-control" name="desc" id="field_desc"
+                [(ngModel)]="source.desc"  ></textarea>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.source.media" for="field_media">Media</label>
+            <input type="text" class="form-control" name="media" id="field_media"
+                [(ngModel)]="source.media"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.source.url" for="field_url">Url</label>
+            <input type="text" class="form-control" name="url" id="field_url"
+                [(ngModel)]="source.url"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.source.stock" for="field_stock">Stock</label>
+            <input type="text" class="form-control" name="stock" id="field_stock"
+                [(ngModel)]="source.stock"  />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

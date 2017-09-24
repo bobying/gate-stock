@@ -1,0 +1,31 @@
+{
+    "gateApp": {
+        "source" : {
+            "home": {
+                "title": "Sources",
+                "createLabel": "Create a new Source",
+                "createOrEditLabel": "Create or edit a Source",
+                "search": "Search for Source"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Source {{ id }}?"
+            },
+            "detail": {
+                "title": "Source"
+            },
+            "date": "Date",
+            "title": "Title",
+            "desc": "Desc",
+            "media": "Media",
+            "url": "Url",
+            "stock": "Stock"
+        }
+    },
+    "sourceApp": {
+        "source" : {
+            "created": "A new Source is created with identifier {{ param }}",
+            "updated": "A Source is updated with identifier {{ param }}",
+            "deleted": "A Source is deleted with identifier {{ param }}"
+        }
+    }
+}
