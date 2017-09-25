@@ -1,0 +1,29 @@
+{
+    "gateApp": {
+        "tracert" : {
+            "home": {
+                "title": "Tracerts",
+                "createLabel": "Create a new Tracert",
+                "createOrEditLabel": "Create or edit a Tracert",
+                "search": "Search for Tracert"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tracert {{ id }}?"
+            },
+            "detail": {
+                "title": "Tracert"
+            },
+            "days": "Days",
+            "increase_day": "Increase Day",
+            "increase_total": "Increase Total",
+            "source": "Source"
+        }
+    },
+    "sourceApp": {
+        "tracert" : {
+            "created": "A new Tracert is created with identifier {{ param }}",
+            "updated": "A Tracert is updated with identifier {{ param }}",
+            "deleted": "A Tracert is deleted with identifier {{ param }}"
+        }
+    }
+}

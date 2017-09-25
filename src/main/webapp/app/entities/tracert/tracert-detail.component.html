@@ -1,0 +1,39 @@
+
+<div *ngIf="tracert">
+    <h2><span jhiTranslate="gateApp.tracert.detail.title">Tracert</span> {{tracert.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gateApp.tracert.days">Days</span></dt>
+        <dd>
+            <span>{{tracert.days}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.tracert.increase_day">Increase Day</span></dt>
+        <dd>
+            <span>{{tracert.increase_day}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.tracert.increase_total">Increase Total</span></dt>
+        <dd>
+            <span>{{tracert.increase_total}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.tracert.source">Source</span></dt>
+        <dd>
+            <div *ngIf="tracert.sourceId">
+                <a [routerLink]="['/source', tracert.sourceId]">{{tracert.sourceTitle}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'tracert/'+ tracert.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

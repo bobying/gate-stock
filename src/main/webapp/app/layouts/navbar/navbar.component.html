@@ -34,6 +34,18 @@
                             <span jhiTranslate="global.menu.entities.source">Source</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="tracert" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <span jhiTranslate="global.menu.entities.tracert">Tracert</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="judge" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <span jhiTranslate="global.menu.entities.judge">Judge</span>
+                        </a>
+                    </li>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </ul>
             </li>

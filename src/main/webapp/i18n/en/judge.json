@@ -1,0 +1,28 @@
+{
+    "gateApp": {
+        "judge" : {
+            "home": {
+                "title": "Judges",
+                "createLabel": "Create a new Judge",
+                "createOrEditLabel": "Create or edit a Judge",
+                "search": "Search for Judge"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Judge {{ id }}?"
+            },
+            "detail": {
+                "title": "Judge"
+            },
+            "score": "Score",
+            "increase_total": "Increase Total",
+            "increase_days": "Increase Days"
+        }
+    },
+    "sourceApp": {
+        "judge" : {
+            "created": "A new Judge is created with identifier {{ param }}",
+            "updated": "A Judge is updated with identifier {{ param }}",
+            "deleted": "A Judge is deleted with identifier {{ param }}"
+        }
+    }
+}
