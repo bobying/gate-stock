@@ -1,0 +1,30 @@
+{
+    "gateApp": {
+        "info" : {
+            "home": {
+                "title": "Infos",
+                "createLabel": "Create a new Info",
+                "createOrEditLabel": "Create or edit a Info",
+                "search": "Search for Info"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Info"
+            },
+            "date": "Date",
+            "title": "Title",
+            "desc": "Desc",
+            "stock": "Stock",
+            "source": "Source"
+        }
+    },
+    "sourceApp": {
+        "info" : {
+            "created": "A new Info is created with identifier {{ param }}",
+            "updated": "A Info is updated with identifier {{ param }}",
+            "deleted": "A Info is deleted with identifier {{ param }}"
+        }
+    }
+}

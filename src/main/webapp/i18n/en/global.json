@@ -10,6 +10,7 @@
                 "source": "Source",
                 "tracert": "Tracert",
                 "judge": "Judge",
+                "info": "Info",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

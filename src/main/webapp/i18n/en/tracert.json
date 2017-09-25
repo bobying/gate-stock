@@ -16,7 +16,10 @@
             "days": "Days",
             "increase_day": "Increase Day",
             "increase_total": "Increase Total",
-            "source": "Source"
+            "amplitude_day": "Amplitude Day",
+            "highest": "Highest",
+            "lowest": "Lowest",
+            "info": "Info"
         }
     },
     "sourceApp": {

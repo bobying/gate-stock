@@ -37,12 +37,27 @@
             <input type="number" class="form-control" name="increase_total" id="field_increase_total"
                 [(ngModel)]="tracert.increase_total"  />
         </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.tracert.amplitude_day" for="field_amplitude_day">Amplitude Day</label>
+            <input type="number" class="form-control" name="amplitude_day" id="field_amplitude_day"
+                [(ngModel)]="tracert.amplitude_day"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.tracert.highest" for="field_highest">Highest</label>
+            <input type="number" class="form-control" name="highest" id="field_highest"
+                [(ngModel)]="tracert.highest"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.tracert.lowest" for="field_lowest">Lowest</label>
+            <input type="number" class="form-control" name="lowest" id="field_lowest"
+                [(ngModel)]="tracert.lowest"  />
+        </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="gateApp.tracert.source" for="field_source">Source</label>
-            <select class="form-control" id="field_source" name="source" [(ngModel)]="tracert.sourceId" >
+            <label class="form-control-label" jhiTranslate="gateApp.tracert.info" for="field_info">Info</label>
+            <select class="form-control" id="field_info" name="info" [(ngModel)]="tracert.infoId" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="sourceOption.id" *ngFor="let sourceOption of sources; trackBy: trackSourceById">{{sourceOption.title}}</option>
+                <option [ngValue]="infoOption.id" *ngFor="let infoOption of infos; trackBy: trackInfoById">{{infoOption.title}}</option>
             </select>
         </div>
     </div>

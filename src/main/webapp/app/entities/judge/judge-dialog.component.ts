@@ -9,6 +9,8 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { Judge } from './judge.model';
 import { JudgePopupService } from './judge-popup.service';
 import { JudgeService } from './judge.service';
+import { Info, InfoService } from '../info';
+import { ResponseWrapper } from '../../shared';
 
 @Component({
     selector: 'jhi-judge-dialog',
@@ -19,16 +21,32 @@ export class JudgeDialogComponent implements OnInit {
     judge: Judge;
     isSaving: boolean;
 
+    infos: Info[];
+
     constructor(
         public activeModal: NgbActiveModal,
         private alertService: JhiAlertService,
         private judgeService: JudgeService,
+        private infoService: InfoService,
         private eventManager: JhiEventManager
     ) {
     }
 
     ngOnInit() {
         this.isSaving = false;
+        this.infoService
+            .query({filter: 'judge-is-null'})
+            .subscribe((res: ResponseWrapper) => {
+                if (!this.judge.infoId) {
+                    this.infos = res.json;
+                } else {
+                    this.infoService
+                        .find(this.judge.infoId)
+                        .subscribe((subRes: Info) => {
+                            this.infos = [subRes].concat(res.json);
+                        }, (subRes: ResponseWrapper) => this.onError(subRes.json));
+                }
+            }, (res: ResponseWrapper) => this.onError(res.json));
     }
 
     clear() {
@@ -69,6 +87,10 @@ export class JudgeDialogComponent implements OnInit {
 
     private onError(error) {
         this.alertService.error(error.message, null, null);
+    }
+
+    trackInfoById(index: number, item: Info) {
+        return item.id;
     }
 }
 

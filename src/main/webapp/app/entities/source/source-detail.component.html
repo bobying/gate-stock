@@ -4,10 +4,6 @@
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="gateApp.source.date">Date</span></dt>
-        <dd>
-            <span>{{source.date | date:'medium'}}</span>
-        </dd>
         <dt><span jhiTranslate="gateApp.source.title">Title</span></dt>
         <dd>
             <span>{{source.title}}</span>
@@ -24,9 +20,9 @@
         <dd>
             <span>{{source.url}}</span>
         </dd>
-        <dt><span jhiTranslate="gateApp.source.stock">Stock</span></dt>
+        <dt><span jhiTranslate="gateApp.source.created">Created</span></dt>
         <dd>
-            <span>{{source.stock}}</span>
+            <span>{{source.created | date:'medium'}}</span>
         </dd>
     </dl>
 

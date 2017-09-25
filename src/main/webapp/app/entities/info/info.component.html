@@ -1,10 +1,16 @@
 <div>
     <h2>
-        <span jhiTranslate="gateApp.source.home.title">Sources</span>
-        <button class="btn btn-primary float-right jh-create-entity create-source" [routerLink]="['/', { outlets: { popup: ['source-new'] } }]">
+        <span jhiTranslate="gateApp.info.home.title">Infos</span>
+        <button class="btn btn-primary float-right jh-create-entity parse-info" [routerLink]="['/', { outlets: { popup: ['info-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span class="hidden-sm-down"  jhiTranslate="gateApp.source.home.createLabel">
-            Create new Source
+            <span class="hidden-sm-down"  jhiTranslate="gateApp.info.home.createLabel">
+            Create new Info
+            </span>
+        </button> 
+        <button class="btn btn-primary float-right jh-create-entity create-info" [routerLink]="['/', { outlets: { popup: ['info-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="gateApp.info.home.createLabel">
+            Create new Info
             </span>
         </button>
     </h2>
@@ -13,7 +19,7 @@
         <div class="col-sm-12">
             <form name="searchForm" class="form-inline">
                 <div class="input-group w-100 mt-3">
-                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'gateApp.source.home.search' | translate }}">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'gateApp.info.home.search' | translate }}">
                     <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
                         <span class="fa fa-search"></span>
                     </button>
@@ -25,44 +31,48 @@
         </div>
     </div>
     <br/>
-    <div class="table-responsive" *ngIf="sources">
+    <div class="table-responsive" *ngIf="infos">
         <table class="table table-striped">
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="title"><span jhiTranslate="gateApp.source.title">Title</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="desc"><span jhiTranslate="gateApp.source.desc">Desc</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="media"><span jhiTranslate="gateApp.source.media">Media</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="url"><span jhiTranslate="gateApp.source.url">Url</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="created"><span jhiTranslate="gateApp.source.created">Created</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="date"><span jhiTranslate="gateApp.info.date">Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="title"><span jhiTranslate="gateApp.info.title">Title</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="desc"><span jhiTranslate="gateApp.info.desc">Desc</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="stock"><span jhiTranslate="gateApp.info.stock">Stock</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sourceTitle"><span jhiTranslate="gateApp.info.source">Source</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let source of sources ;trackBy: trackId">
-                <td><a [routerLink]="['../source', source.id ]">{{source.id}}</a></td>
-                <td>{{source.title}}</td>
-                <td>{{source.desc}}</td>
-                <td>{{source.media}}</td>
-                <td>{{source.url}}</td>
-                <td>{{source.created | date:'medium'}}</td>
+            <tr *ngFor="let info of infos ;trackBy: trackId">
+                <td><a [routerLink]="['../info', info.id ]">{{info.id}}</a></td>
+                <td>{{info.date | date:'medium'}}</td>
+                <td>{{info.title}}</td>
+                <td>{{info.desc}}</td>
+                <td>{{info.stock}}</td>
+                <td>
+                    <div *ngIf="info.sourceId">
+                        <a [routerLink]="['../source', info.sourceId  ]" >{{info.sourceTitle}}</a>
+                    </div>
+                </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"
-                                [routerLink]="['../source', source.id ]"
+                                [routerLink]="['../info', info.id ]"
                                 class="btn btn-info btn-sm">
                             <span class="fa fa-eye"></span>
                             <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
                         </button>
                         <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'source/'+ source.id + '/edit'} }]"
+                                [routerLink]="['/', { outlets: { popup: 'info/'+ info.id + '/edit'} }]"
                                 replaceUrl="true"
                                 class="btn btn-primary btn-sm">
                             <span class="fa fa-pencil"></span>
                             <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
                         </button>
                         <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'source/'+ source.id + '/delete'} }]"
+                                [routerLink]="['/', { outlets: { popup: 'info/'+ info.id + '/delete'} }]"
                                 replaceUrl="true"
                                 class="btn btn-danger btn-sm">
                             <span class="fa fa-remove"></span>
@@ -75,7 +85,7 @@
         </table>
     </div>
         <!-- Pager is not implemented yet, so this is normal pagination instead -->
-        <div *ngIf="sources && sources.length">
+        <div *ngIf="infos && infos.length">
             <div class="row justify-content-center">
                 <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
             </div>

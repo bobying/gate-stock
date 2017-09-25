@@ -6,6 +6,7 @@ export class Judge implements BaseEntity {
         public score?: number,
         public increase_total?: number,
         public increase_days?: number,
+        public infoId?: number,
     ) {
     }
 }

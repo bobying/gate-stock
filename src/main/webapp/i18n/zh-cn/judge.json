@@ -15,7 +15,8 @@
             },
             "score": "Score",
             "increase_total": "Increase Total",
-            "increase_days": "Increase Days"
+            "increase_days": "Increase Days",
+            "info": "Info"
         }
     },
     "sourceApp": {

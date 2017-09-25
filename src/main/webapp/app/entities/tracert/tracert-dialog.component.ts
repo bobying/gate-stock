@@ -9,7 +9,7 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { Tracert } from './tracert.model';
 import { TracertPopupService } from './tracert-popup.service';
 import { TracertService } from './tracert.service';
-import { Source, SourceService } from '../source';
+import { Info, InfoService } from '../info';
 import { ResponseWrapper } from '../../shared';
 
 @Component({
@@ -21,21 +21,21 @@ export class TracertDialogComponent implements OnInit {
     tracert: Tracert;
     isSaving: boolean;
 
-    sources: Source[];
+    infos: Info[];
 
     constructor(
         public activeModal: NgbActiveModal,
         private alertService: JhiAlertService,
         private tracertService: TracertService,
-        private sourceService: SourceService,
+        private infoService: InfoService,
         private eventManager: JhiEventManager
     ) {
     }
 
     ngOnInit() {
         this.isSaving = false;
-        this.sourceService.query()
-            .subscribe((res: ResponseWrapper) => { this.sources = res.json; }, (res: ResponseWrapper) => this.onError(res.json));
+        this.infoService.query()
+            .subscribe((res: ResponseWrapper) => { this.infos = res.json; }, (res: ResponseWrapper) => this.onError(res.json));
     }
 
     clear() {
@@ -78,7 +78,7 @@ export class TracertDialogComponent implements OnInit {
         this.alertService.error(error.message, null, null);
     }
 
-    trackSourceById(index: number, item: Source) {
+    trackInfoById(index: number, item: Info) {
         return item.id;
     }
 }

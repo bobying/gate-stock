@@ -3,19 +3,19 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { JhiDateUtils } from 'ng-jhipster';
 
-import { Source } from './source.model';
+import { Info } from './info.model';
 import { ResponseWrapper, createRequestOption } from '../../shared';
 
 @Injectable()
-export class SourceService {
+export class InfoService {
 
-    private resourceUrl = 'source/api/sources';
-    private resourceSearchUrl = 'source/api/_search/sources';
+    private resourceUrl = 'source/api/infos';
+    private resourceSearchUrl = 'source/api/_search/infos';
 
     constructor(private http: Http, private dateUtils: JhiDateUtils) { }
 
-    create(source: Source): Observable<Source> {
-        const copy = this.convert(source);
+    create(info: Info): Observable<Info> {
+        const copy = this.convert(info);
         return this.http.post(this.resourceUrl, copy).map((res: Response) => {
             const jsonResponse = res.json();
             this.convertItemFromServer(jsonResponse);
@@ -23,8 +23,8 @@ export class SourceService {
         });
     }
 
-    update(source: Source): Observable<Source> {
-        const copy = this.convert(source);
+    update(info: Info): Observable<Info> {
+        const copy = this.convert(info);
         return this.http.put(this.resourceUrl, copy).map((res: Response) => {
             const jsonResponse = res.json();
             this.convertItemFromServer(jsonResponse);
@@ -32,7 +32,7 @@ export class SourceService {
         });
     }
 
-    find(id: number): Observable<Source> {
+    find(id: number): Observable<Info> {
         return this.http.get(`${this.resourceUrl}/${id}`).map((res: Response) => {
             const jsonResponse = res.json();
             this.convertItemFromServer(jsonResponse);
@@ -65,14 +65,14 @@ export class SourceService {
     }
 
     private convertItemFromServer(entity: any) {
-        entity.created = this.dateUtils
-            .convertDateTimeFromServer(entity.created);
+        entity.date = this.dateUtils
+            .convertDateTimeFromServer(entity.date);
     }
 
-    private convert(source: Source): Source {
-        const copy: Source = Object.assign({}, source);
+    private convert(info: Info): Info {
+        const copy: Info = Object.assign({}, info);
 
-        copy.created = this.dateUtils.toDate(source.created);
+        copy.date = this.dateUtils.toDate(info.date);
         return copy;
     }
 }

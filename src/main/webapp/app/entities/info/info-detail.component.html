@@ -1,0 +1,43 @@
+
+<div *ngIf="info">
+    <h2><span jhiTranslate="gateApp.info.detail.title">Info</span> {{info.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gateApp.info.date">Date</span></dt>
+        <dd>
+            <span>{{info.date | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.info.title">Title</span></dt>
+        <dd>
+            <span>{{info.title}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.info.desc">Desc</span></dt>
+        <dd>
+            <span>{{info.desc}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.info.stock">Stock</span></dt>
+        <dd>
+            <span>{{info.stock}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.info.source">Source</span></dt>
+        <dd>
+            <div *ngIf="info.sourceId">
+                <a [routerLink]="['/source', info.sourceId]">{{info.sourceTitle}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'info/'+ info.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

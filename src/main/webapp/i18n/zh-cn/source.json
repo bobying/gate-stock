@@ -13,12 +13,11 @@
             "detail": {
                 "title": "Source"
             },
-            "date": "Date",
             "title": "Title",
             "desc": "Desc",
             "media": "Media",
             "url": "Url",
-            "stock": "Stock"
+            "created": "Created"
         }
     },
     "sourceApp": {

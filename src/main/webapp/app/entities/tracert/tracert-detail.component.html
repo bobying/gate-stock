@@ -16,10 +16,22 @@
         <dd>
             <span>{{tracert.increase_total}}</span>
         </dd>
-        <dt><span jhiTranslate="gateApp.tracert.source">Source</span></dt>
+        <dt><span jhiTranslate="gateApp.tracert.amplitude_day">Amplitude Day</span></dt>
         <dd>
-            <div *ngIf="tracert.sourceId">
-                <a [routerLink]="['/source', tracert.sourceId]">{{tracert.sourceTitle}}</a>
+            <span>{{tracert.amplitude_day}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.tracert.highest">Highest</span></dt>
+        <dd>
+            <span>{{tracert.highest}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.tracert.lowest">Lowest</span></dt>
+        <dd>
+            <span>{{tracert.lowest}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.tracert.info">Info</span></dt>
+        <dd>
+            <div *ngIf="tracert.infoId">
+                <a [routerLink]="['/info', tracert.infoId]">{{tracert.infoTitle}}</a>
             </div>
         </dd>
     </dl>

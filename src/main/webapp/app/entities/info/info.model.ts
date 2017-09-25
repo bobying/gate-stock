@@ -1,13 +1,13 @@
 import { BaseEntity } from './../../shared';
 
-export class Source implements BaseEntity {
+export class Info implements BaseEntity {
     constructor(
         public id?: number,
+        public date?: any,
         public title?: string,
         public desc?: any,
-        public media?: string,
-        public url?: string,
-        public created?: any,
+        public stock?: string,
+        public sourceId?: number,
     ) {
     }
 }

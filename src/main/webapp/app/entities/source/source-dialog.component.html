@@ -13,13 +13,6 @@
                    [(ngModel)]="source.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="gateApp.source.date" for="field_date">Date</label>
-            <div class="d-flex">
-                <input id="field_date" type="datetime-local" class="form-control" name="date" [(ngModel)]="source.date"
-                  />
-            </div>
-        </div>
-        <div class="form-group">
             <label class="form-control-label" jhiTranslate="gateApp.source.title" for="field_title">Title</label>
             <input type="text" class="form-control" name="title" id="field_title"
                 [(ngModel)]="source.title"  />
@@ -40,9 +33,11 @@
                 [(ngModel)]="source.url"  />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="gateApp.source.stock" for="field_stock">Stock</label>
-            <input type="text" class="form-control" name="stock" id="field_stock"
-                [(ngModel)]="source.stock"  />
+            <label class="form-control-label" jhiTranslate="gateApp.source.created" for="field_created">Created</label>
+            <div class="d-flex">
+                <input id="field_created" type="datetime-local" class="form-control" name="created" [(ngModel)]="source.created"
+                  />
+            </div>
         </div>
 
     </div>

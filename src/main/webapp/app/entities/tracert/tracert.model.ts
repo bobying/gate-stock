@@ -6,7 +6,10 @@ export class Tracert implements BaseEntity {
         public days?: number,
         public increase_day?: number,
         public increase_total?: number,
-        public sourceId?: number,
+        public amplitude_day?: number,
+        public highest?: number,
+        public lowest?: number,
+        public infoId?: number,
     ) {
     }
 }

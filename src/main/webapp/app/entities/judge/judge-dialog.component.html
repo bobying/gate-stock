@@ -42,6 +42,13 @@
                 [(ngModel)]="judge.increase_days"  />
         </div>
 
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.judge.info" for="field_info">Info</label>
+            <select class="form-control" id="field_info" name="info" [(ngModel)]="judge.infoId">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="infoOption.id" *ngFor="let infoOption of infos; trackBy: trackInfoById">{{infoOption.title}}</option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
