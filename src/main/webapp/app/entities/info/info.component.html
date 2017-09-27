@@ -50,7 +50,7 @@
                 <td>{{info.date | date:'medium'}}</td>
                 <td>{{info.title}}</td>
                 <td>{{info.desc}}</td>
-                <td>{{info.stock}}</td>
+                <td><a target="_blank" href="http://q.stock.sohu.com/cn/{{info.stock}}/index.shtml">{{info.stock}}</a></td>
                 <td>
                     <div *ngIf="info.sourceId">
                         <a [routerLink]="['../source', info.sourceId  ]" >{{info.sourceTitle}}</a>
