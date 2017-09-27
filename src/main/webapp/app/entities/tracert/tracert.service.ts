@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
+import { JhiDateUtils } from 'ng-jhipster';
 
 import { Tracert } from './tracert.model';
 import { ResponseWrapper, createRequestOption } from '../../shared';
@@ -11,25 +12,31 @@ export class TracertService {
     private resourceUrl = 'source/api/tracerts';
     private resourceSearchUrl = 'source/api/_search/tracerts';
 
-    constructor(private http: Http) { }
+    constructor(private http: Http, private dateUtils: JhiDateUtils) { }
 
     create(tracert: Tracert): Observable<Tracert> {
         const copy = this.convert(tracert);
         return this.http.post(this.resourceUrl, copy).map((res: Response) => {
-            return res.json();
+            const jsonResponse = res.json();
+            this.convertItemFromServer(jsonResponse);
+            return jsonResponse;
         });
     }
 
     update(tracert: Tracert): Observable<Tracert> {
         const copy = this.convert(tracert);
         return this.http.put(this.resourceUrl, copy).map((res: Response) => {
-            return res.json();
+            const jsonResponse = res.json();
+            this.convertItemFromServer(jsonResponse);
+            return jsonResponse;
         });
     }
 
     find(id: number): Observable<Tracert> {
         return this.http.get(`${this.resourceUrl}/${id}`).map((res: Response) => {
-            return res.json();
+            const jsonResponse = res.json();
+            this.convertItemFromServer(jsonResponse);
+            return jsonResponse;
         });
     }
 
@@ -51,11 +58,21 @@ export class TracertService {
 
     private convertResponse(res: Response): ResponseWrapper {
         const jsonResponse = res.json();
+        for (let i = 0; i < jsonResponse.length; i++) {
+            this.convertItemFromServer(jsonResponse[i]);
+        }
         return new ResponseWrapper(res.headers, jsonResponse, res.status);
+    }
+
+    private convertItemFromServer(entity: any) {
+        entity.date = this.dateUtils
+            .convertLocalDateFromServer(entity.date);
     }
 
     private convert(tracert: Tracert): Tracert {
         const copy: Tracert = Object.assign({}, tracert);
+        copy.date = this.dateUtils
+            .convertLocalDateToServer(tracert.date);
         return copy;
     }
 }

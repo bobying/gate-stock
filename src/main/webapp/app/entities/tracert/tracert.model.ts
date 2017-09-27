@@ -9,6 +9,7 @@ export class Tracert implements BaseEntity {
         public amplitude_day?: number,
         public highest?: number,
         public lowest?: number,
+        public date?: any,
         public infoId?: number,
     ) {
     }

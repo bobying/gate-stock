@@ -22,6 +22,7 @@ export class TracertDialogComponent implements OnInit {
     isSaving: boolean;
 
     infos: Info[];
+    dateDp: any;
 
     constructor(
         public activeModal: NgbActiveModal,

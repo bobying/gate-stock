@@ -26,6 +26,13 @@ export class TracertPopupService {
 
             if (id) {
                 this.tracertService.find(id).subscribe((tracert) => {
+                    if (tracert.date) {
+                        tracert.date = {
+                            year: tracert.date.getFullYear(),
+                            month: tracert.date.getMonth() + 1,
+                            day: tracert.date.getDate()
+                        };
+                    }
                     this.ngbModalRef = this.tracertModalRef(component, tracert);
                     resolve(this.ngbModalRef);
                 });

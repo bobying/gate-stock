@@ -36,6 +36,7 @@
             <th><span jhiTranslate="gateApp.tracert.amplitude_day">Amplitude Day</span></th>
             <th><span jhiTranslate="gateApp.tracert.highest">Highest</span></th>
             <th><span jhiTranslate="gateApp.tracert.lowest">Lowest</span></th>
+            <th><span jhiTranslate="gateApp.tracert.date">Date</span></th>
             <th><span jhiTranslate="gateApp.tracert.info">Info</span></th>
             <th></th>
             </tr>
@@ -49,6 +50,7 @@
                 <td>{{tracert.amplitude_day}}</td>
                 <td>{{tracert.highest}}</td>
                 <td>{{tracert.lowest}}</td>
+                <td>{{tracert.date | date:'mediumDate'}}</td>
                 <td>
                     <div *ngIf="tracert.infoId">
                         <a [routerLink]="['../info', tracert.infoId  ]" >{{tracert.infoTitle}}</a>

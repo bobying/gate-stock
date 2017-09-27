@@ -28,6 +28,10 @@
         <dd>
             <span>{{tracert.lowest}}</span>
         </dd>
+        <dt><span jhiTranslate="gateApp.tracert.date">Date</span></dt>
+        <dd>
+            <span>{{tracert.date | date:'mediumDate'}}</span>
+        </dd>
         <dt><span jhiTranslate="gateApp.tracert.info">Info</span></dt>
         <dd>
             <div *ngIf="tracert.infoId">
