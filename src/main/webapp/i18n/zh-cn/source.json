@@ -2,29 +2,29 @@
     "gateApp": {
         "source" : {
             "home": {
-                "title": "Sources",
-                "createLabel": "Create a new Source",
-                "createOrEditLabel": "Create or edit a Source",
-                "search": "Search for Source"
+                "title": "消息源",
+                "createLabel": "生成一条消息源",
+                "createOrEditLabel": "生成或编辑消息源",
+                "search": "在消息源中查找"
             },
             "delete": {
-                "question": "Are you sure you want to delete Source {{ id }}?"
+                "question": "您确定要删除消息源 {{ id }}?"
             },
             "detail": {
-                "title": "Source"
+                "title": "消息源"
             },
-            "title": "Title",
-            "desc": "Desc",
-            "media": "Media",
-            "url": "Url",
-            "created": "Created"
+            "title": "标题",
+            "desc": "描述",
+            "media": "媒体",
+            "url": "Url地址",
+            "created": "生成日期"
         }
     },
     "sourceApp": {
         "source" : {
-            "created": "A new Source is created with identifier {{ param }}",
-            "updated": "A Source is updated with identifier {{ param }}",
-            "deleted": "A Source is deleted with identifier {{ param }}"
+            "created": "新的消息源 {{ param }} 生成",
+            "updated": "消息源 {{ param }} 更新完成",
+            "deleted": "消息源 {{ param }} 删除完成"
         }
     }
 }

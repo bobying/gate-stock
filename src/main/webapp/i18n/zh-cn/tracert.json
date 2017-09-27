@@ -2,32 +2,32 @@
     "gateApp": {
         "tracert" : {
             "home": {
-                "title": "Tracerts",
-                "createLabel": "Create a new Tracert",
-                "createOrEditLabel": "Create or edit a Tracert",
-                "search": "Search for Tracert"
+                "title": "跟踪记录",
+                "createLabel": "新建一条跟踪记录",
+                "createOrEditLabel": "新建或编辑跟踪记录",
+                "search": "查找跟踪记录"
             },
             "delete": {
-                "question": "Are you sure you want to delete Tracert {{ id }}?"
+                "question": "您确定要删除跟踪记录 {{ id }}?"
             },
             "detail": {
-                "title": "Tracert"
+                "title": "跟踪记录"
             },
-            "days": "Days",
-            "increase_day": "Increase Day",
-            "increase_total": "Increase Total",
-            "amplitude_day": "Amplitude Day",
-            "highest": "Highest",
-            "lowest": "Lowest",
-            "date": "Date",
-            "info": "Info"
+            "days": "第几天",
+            "date": "日期",
+            "increase_day": "日涨幅",
+            "increase_total": "总涨幅",
+            "amplitude_day": "日震荡",
+            "highest": "最高",
+            "lowest": "最低",
+            "info": "消息"
         }
     },
     "sourceApp": {
         "tracert" : {
-            "created": "A new Tracert is created with identifier {{ param }}",
-            "updated": "A Tracert is updated with identifier {{ param }}",
-            "deleted": "A Tracert is deleted with identifier {{ param }}"
+            "created": "一条新的跟踪记录 {{ param }} 生成",
+            "updated": "跟踪记录 {{ param }} 更新完成",
+            "deleted": "跟踪记录 {{ param }} 删除完成"
         }
     }
 }

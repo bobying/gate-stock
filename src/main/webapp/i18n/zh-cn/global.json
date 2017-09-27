@@ -1,16 +1,16 @@
 {
     "global": {
-        "title": "Gate",
+        "title": "股票分析",
         "browsehappy": "您目前使用<strong>过于老旧</strong>的浏览器, 建议您<a href=\"http://browsehappy.com/?locale=en\">升级浏览器</a>让您有更佳的上网体验.",
         "menu": {
             "home": "首页",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "数据",
-                "source": "Source",
-                "tracert": "Tracert",
-                "judge": "Judge",
-                "info": "Info",
+                "source": "消息源",
+                "info": "消息",
+                "tracert": "跟踪记录",
+                "judge": "消息判断",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -87,7 +87,7 @@
             "id" : "ID"
         },
         "ribbon": {
-            "dev":"Development"
+            "dev":"开发中"
         },
         "item-count": "显示第 {{first}} - {{second}} 条，共 {{total}} 条"
     },
@@ -99,7 +99,7 @@
             "cancel": "取消",
             "delete": "删除",
             "edit": "编辑",
-            "open": "Open",
+            "open": "打开",
             "save": "保存",
             "view": "查看"
         },
@@ -124,9 +124,9 @@
         }
     },
     "error": {
-        "internalServerError": "Internal server error",
+        "internalServerError": "服务器内部错误",
         "server.not.reachable": "服务器无法访问",
-        "url.not.found": "Not found",
+        "url.not.found": "未找到",
         "NotNull": "域 {{fieldName}} 不能为空!",
         "Size": "域 {{fieldName}} 不满足最大/最小值限制!",
         "userexists": "该用户名已存在!",
