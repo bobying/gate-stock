@@ -3,7 +3,7 @@
         "tracert" : {
             "home": {
                 "title": "跟踪记录",
-                "createLabel": "新建一条跟踪记录",
+                "createLabel": "新增",
                 "createOrEditLabel": "新建或编辑跟踪记录",
                 "search": "查找跟踪记录"
             },

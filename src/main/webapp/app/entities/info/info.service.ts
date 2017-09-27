@@ -14,6 +14,10 @@ export class InfoService {
 
     constructor(private http: Http, private dateUtils: JhiDateUtils) { }
 
+    parse() {
+        return this.http.get(`${this.resourceUrl}/parse`);
+    }
+
     create(info: Info): Observable<Info> {
         const copy = this.convert(info);
         return this.http.post(this.resourceUrl, copy).map((res: Response) => {

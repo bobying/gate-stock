@@ -1,18 +1,17 @@
 <div>
     <h2>
         <span jhiTranslate="gateApp.info.home.title">Infos</span>
-        <button class="btn btn-primary float-right jh-create-entity parse-info" [routerLink]="['/', { outlets: { popup: ['info-new'] } }]">
-            <span class="fa fa-plus"></span>
-            <span class="hidden-sm-down"  jhiTranslate="gateApp.info.home.createLabel">
-            Create new Info
-            </span>
-        </button> 
         <button class="btn btn-primary float-right jh-create-entity create-info" [routerLink]="['/', { outlets: { popup: ['info-new'] } }]">
             <span class="fa fa-plus"></span>
             <span class="hidden-sm-down"  jhiTranslate="gateApp.info.home.createLabel">
             Create new Info
             </span>
         </button>
+        <button class="btn btn-primary float-right parse-info" (click)="parse()">
+            <span class="hidden-sm-down"  jhiTranslate="gateApp.info.home.parse">
+            parse info
+            </span>
+        </button> 
     </h2>
     <jhi-alert></jhi-alert>
     <div class="row">

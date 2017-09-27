@@ -3,7 +3,8 @@
         "info" : {
             "home": {
                 "title": "消息",
-                "createLabel": "生成一条新消息",
+                "createLabel": "新增",
+                "parse": "分析",
                 "createOrEditLabel": "生成或编辑一条消息",
                 "search": "查找消息"
             },

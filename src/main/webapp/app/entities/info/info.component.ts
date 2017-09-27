@@ -52,6 +52,15 @@ currentAccount: any;
         this.currentSearch = activatedRoute.snapshot.params['search'] ? activatedRoute.snapshot.params['search'] : '';
     }
 
+    parse() {
+        this.infoService.parse().subscribe((response) => {
+            this.eventManager.broadcast({
+                name: 'infoListModification',
+                content: 'parsed infos'
+            });
+        });
+    }
+
     loadAll() {
         if (this.currentSearch) {
             this.infoService.search({

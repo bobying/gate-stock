@@ -3,7 +3,7 @@
         "source" : {
             "home": {
                 "title": "消息源",
-                "createLabel": "生成一条消息源",
+                "createLabel": “新增”,
                 "createOrEditLabel": "生成或编辑消息源",
                 "search": "在消息源中查找"
             },

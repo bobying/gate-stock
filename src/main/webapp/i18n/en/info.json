@@ -4,6 +4,7 @@
             "home": {
                 "title": "Infos",
                 "createLabel": "Create a new Info",
+                "parse": "Parse Info",
                 "createOrEditLabel": "Create or edit a Info",
                 "search": "Search for Info"
             },

@@ -3,7 +3,7 @@
         "judge" : {
             "home": {
                 "title": "消息判断",
-                "createLabel": "生成新的消息判断",
+                "createLabel": "新增",
                 "createOrEditLabel": "生成或修改新的消息判断",
                 "search": "查找消息判断"
             },
