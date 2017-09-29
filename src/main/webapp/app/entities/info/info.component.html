@@ -38,9 +38,9 @@
             <th jhiSortBy="date"><span jhiTranslate="gateApp.info.date">Date</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="title"><span jhiTranslate="gateApp.info.title">Title</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="stock"><span jhiTranslate="gateApp.info.stock">Stock</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="sourceTitle"><span jhiTranslate="gateApp.info.source">Source</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="increaseDays"><span jhiTranslate="gateApp.info.increase_days">Increase Days</span> <span class="fa"></span></th>
             <th jhiSortBy="increaseTotal"><span jhiTranslate="gateApp.info.increase_total">Increase Total</span> <span class="fa"></span></th>
+            <th jhiSortBy="sourceTitle"><span jhiTranslate="gateApp.info.source">Source</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>
@@ -50,13 +50,13 @@
                 <td>{{info.date | date:'medium'}}</td>
                 <td>{{info.title}}</td>
                 <td><a target="_blank" href="http://q.stock.sohu.com/cn/{{info.stock}}/index.shtml">{{info.stock}}</a></td>
+                <td>{{info.increaseDays}}天</td>
+                <td>{{info.increaseTotal}}</td>
                 <td>
                     <div *ngIf="info.sourceId">
                         <a [routerLink]="['../source', info.sourceId  ]" >{{info.sourceTitle}}</a>
                     </div>
                 </td>
-                <td>{{info.increaseDays}}</td>
-                <td>{{info.increaseTotal}}</td>
 
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">

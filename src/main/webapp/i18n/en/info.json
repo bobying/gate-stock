@@ -18,6 +18,9 @@
             "title": "Title",
             "desc": "Desc",
             "stock": "Stock",
+            "score": "Score",
+            "increase_total": "Inc Total",
+            "increase_days": "Inc Days",
             "source": "Source"
         }
     },

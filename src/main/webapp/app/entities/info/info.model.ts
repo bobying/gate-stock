@@ -10,7 +10,7 @@ export class Info implements BaseEntity {
         public sourceId?: number,
         public judgeId?: number,
         public increaseDays?: number,
-        public increaseTotal?: number,
+        public increaseTotal?: string,
         public judgeScore?: number,
     ) {
     }
