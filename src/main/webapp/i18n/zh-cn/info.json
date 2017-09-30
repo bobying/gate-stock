@@ -22,6 +22,9 @@
             "increase": "上涨",
             "increase_total": "幅度",
             "increase_days": "天数",
+            "increasedDay5": "5天",
+            "increasedDay10": "10天",
+            "increasedDay30": "30天",
             "source": "消息源"
         }
     },

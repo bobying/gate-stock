@@ -11,6 +11,9 @@ export class Info implements BaseEntity {
         public judgeId?: number,
         public increaseDays?: number,
         public increaseTotal?: string,
+        public increasedDay5?: number,
+        public increasedDay10?: number,
+        public increasedDay30?: number,
         public judgeScore?: number,
     ) {
     }

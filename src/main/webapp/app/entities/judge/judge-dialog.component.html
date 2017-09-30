@@ -15,21 +15,7 @@
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="gateApp.judge.score" for="field_score">Score</label>
             <input type="number" class="form-control" name="score" id="field_score"
-                [(ngModel)]="judge.score" min="-10" max="10" />
-            <div [hidden]="!(editForm.controls.score?.dirty && editForm.controls.score?.invalid)">
-                <small class="form-text text-danger"
-                    [hidden]="!editForm.controls.score?.errors?.min" jhiTranslate="entity.validation.min" translateValues="{ min: -10 }">
-                    This field should be at least -10.
-                </small>
-                <small class="form-text text-danger"
-                    [hidden]="!editForm.controls.score?.errors?.max" jhiTranslate="entity.validation.max" translateValues="{ max: 10 }">
-                    This field cannot be more than 10.
-                </small>
-                <small class="form-text text-danger"
-                    [hidden]="!editForm.controls.score?.errors?.number" jhiTranslate="entity.validation.number">
-                    This field should be a number.
-                </small>
-            </div>
+                [(ngModel)]="judge.score"  />
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="gateApp.judge.increase_total" for="field_increase_total">Increase Total</label>
@@ -40,6 +26,21 @@
             <label class="form-control-label" jhiTranslate="gateApp.judge.increase_days" for="field_increase_days">Increase Days</label>
             <input type="number" class="form-control" name="increase_days" id="field_increase_days"
                 [(ngModel)]="judge.increase_days"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.judge.day5" for="field_day5">Day 5</label>
+            <input type="number" class="form-control" name="day5" id="field_day5"
+                [(ngModel)]="judge.day5"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.judge.day10" for="field_day10">Day 10</label>
+            <input type="number" class="form-control" name="day10" id="field_day10"
+                [(ngModel)]="judge.day10"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.judge.day30" for="field_day30">Day 30</label>
+            <input type="number" class="form-control" name="day30" id="field_day30"
+                [(ngModel)]="judge.day30"  />
         </div>
 
         <div class="form-group">

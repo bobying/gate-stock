@@ -2,28 +2,31 @@
     "gateApp": {
         "judge" : {
             "home": {
-                "title": "消息判断",
-                "createLabel": "新增",
-                "createOrEditLabel": "生成或修改新的消息判断",
-                "search": "查找消息判断"
+                "title": "Judges",
+                "createLabel": "Create a new Judge",
+                "createOrEditLabel": "Create or edit a Judge",
+                "search": "Search for Judge"
             },
             "delete": {
-                "question": "您确定要删除消息判断 {{ id }}?"
+                "question": "Are you sure you want to delete Judge {{ id }}?"
             },
             "detail": {
-                "title": "消息判断"
+                "title": "Judge"
             },
-            "score": "得分",
-            "increase_total": "总涨幅",
-            "increase_days": "上涨天数",
-            "info": "消息"
+            "score": "Score",
+            "increase_total": "Increase Total",
+            "increase_days": "Increase Days",
+            "day5": "Day 5",
+            "day10": "Day 10",
+            "day30": "Day 30",
+            "info": "Info"
         }
     },
     "sourceApp": {
         "judge" : {
-            "created": "新的消息判断 {{ param }} 生成",
-            "updated": "消息判断 {{ param }} 更新完成",
-            "deleted": "消息判断 {{ param }} 删除完成"
+            "created": "A new Judge is created with identifier {{ param }}",
+            "updated": "A Judge is updated with identifier {{ param }}",
+            "deleted": "A Judge is deleted with identifier {{ param }}"
         }
     }
 }

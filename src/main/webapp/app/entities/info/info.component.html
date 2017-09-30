@@ -38,13 +38,16 @@
             <th rowspan="2" jhiSortBy="date" style="width:9em"><span jhiTranslate="gateApp.info.date">Date</span> <span class="fa fa-sort"></span></th>
             <th rowspan="2" jhiSortBy="title"><span jhiTranslate="gateApp.info.title">Title</span> <span class="fa fa-sort"></span></th>
             <th rowspan="2" jhiSortBy="stock"><span jhiTranslate="gateApp.info.stock">Stock</span> <span class="fa fa-sort"></span></th>
-            <th colspan="2" class="row1"><span jhiTranslate="gateApp.info.increase">Increase</span></th>
+            <th colspan="5" class="row1"><span jhiTranslate="gateApp.info.increase">Increase</span></th>
             <th rowspan="2" jhiSortBy="sourceTitle"><span jhiTranslate="gateApp.info.source">Source</span> <span class="fa fa-sort"></span></th>
             <th rowspan="2"></th>
             </tr>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th class="row2" jhiSortBy="increaseDays" style="min-width:5em"><span jhiTranslate="gateApp.info.increase_days">Days</span> <span class="fa fa-sort"></span></th>
             <th class="row2" jhiSortBy="increaseTotal"><span jhiTranslate="gateApp.info.increase_total">Total</span> <span class="fa fa-sort"></span></th>
+            <th class="row2" jhiSortBy="increasedDay5"><span jhiTranslate="gateApp.info.increasedDay5">5th Day</span> <span class="fa fa-sort"></span></th>
+            <th class="row2" jhiSortBy="increasedDay10"><span jhiTranslate="gateApp.info.increasedDay10">10th Day</span> <span class="fa fa-sort"></span></th>
+            <th class="row2" jhiSortBy="increasedDay30"><span jhiTranslate="gateApp.info.increasedDay30">30th Day</span> <span class="fa fa-sort"></span></th>
             </tr>
             </thead>
             <tbody>
@@ -55,6 +58,9 @@
                 <td><a target="_blank" href="http://q.stock.sohu.com/cn/{{info.stock}}/index.shtml">{{info.stock}}</a></td>
                 <td>{{info.increaseDays}}天</td>
                 <td>{{info.increaseTotal}}</td>
+                <td>{{info.increasedDay5}}</td>
+                <td>{{info.increasedDay10}}</td>
+                <td>{{info.increasedDay30}}</td>
                 <td>
                     <div *ngIf="info.sourceId">
                         <a [routerLink]="['../source', info.sourceId  ]" >{{info.sourceTitle}}</a>

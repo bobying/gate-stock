@@ -33,6 +33,9 @@
             <th jhiSortBy="score"><span jhiTranslate="gateApp.judge.score">Score</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="increase_total"><span jhiTranslate="gateApp.judge.increase_total">Increase Total</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="increase_days"><span jhiTranslate="gateApp.judge.increase_days">Increase Days</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="day5"><span jhiTranslate="gateApp.judge.day5">Day 5</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="day10"><span jhiTranslate="gateApp.judge.day10">Day 10</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="day30"><span jhiTranslate="gateApp.judge.day30">Day 30</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="infoTitle"><span jhiTranslate="gateApp.judge.info">Info</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
@@ -43,6 +46,9 @@
                 <td>{{judge.score}}</td>
                 <td>{{judge.increase_total}}</td>
                 <td>{{judge.increase_days}}</td>
+                <td>{{judge.day5}}</td>
+                <td>{{judge.day10}}</td>
+                <td>{{judge.day30}}</td>
                 <td>
                     <div *ngIf="judge.infoId">
                         <a [routerLink]="['../info', judge.infoId  ]" >{{judge.infoTitle}}</a>

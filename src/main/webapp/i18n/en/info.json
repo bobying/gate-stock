@@ -22,6 +22,9 @@
             "increase": "Increase",
             "increase_total": "Total",
             "increase_days": "Days",
+            "increasedDay5": "5th Day",
+            "increasedDay10": "10th Day",
+            "increasedDay30": "30th Day",
             "source": "Source"
         }
     },

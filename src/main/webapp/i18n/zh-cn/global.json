@@ -11,6 +11,7 @@
                 "info": "消息",
                 "tracert": "跟踪记录",
                 "judge": "消息判断",
+                "judge": "Judge",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
