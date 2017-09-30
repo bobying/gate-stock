@@ -5,3 +5,20 @@
 .parse-info {
     margin-right: 1em;
 }
+
+.table thead th {
+    vertical-align: middle;
+    text-align: center;
+    padding: .3em;
+    white-space: nowrap
+}
+
+.row1 {
+    font-size: 0.8em;
+    border-bottom: 0px;
+}
+
+.row2 {
+    font-size: 0.8em;
+    border-bottom: 0px;
+}

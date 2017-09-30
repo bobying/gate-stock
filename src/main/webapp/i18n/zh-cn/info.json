@@ -19,8 +19,9 @@
             "desc": "描述",
             "stock": "股票",
             "score": "得分",
-            "increase_total": "总涨幅",
-            "increase_days": "上涨",
+            "increase": "上涨",
+            "increase_total": "幅度",
+            "increase_days": "天数",
             "source": "消息源"
         }
     },

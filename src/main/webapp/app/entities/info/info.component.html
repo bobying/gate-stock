@@ -34,14 +34,17 @@
         <table class="table table-striped">
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
-            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="date"><span jhiTranslate="gateApp.info.date">Date</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="title"><span jhiTranslate="gateApp.info.title">Title</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="stock"><span jhiTranslate="gateApp.info.stock">Stock</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="increaseDays"><span jhiTranslate="gateApp.info.increase_days">Increase Days</span> <span class="fa"></span></th>
-            <th jhiSortBy="increaseTotal"><span jhiTranslate="gateApp.info.increase_total">Increase Total</span> <span class="fa"></span></th>
-            <th jhiSortBy="sourceTitle"><span jhiTranslate="gateApp.info.source">Source</span> <span class="fa fa-sort"></span></th>
-            <th></th>
+            <th rowspan="2" jhiSortBy="id" style="min-width:4em"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th rowspan="2" jhiSortBy="date" style="width:9em"><span jhiTranslate="gateApp.info.date">Date</span> <span class="fa fa-sort"></span></th>
+            <th rowspan="2" jhiSortBy="title"><span jhiTranslate="gateApp.info.title">Title</span> <span class="fa fa-sort"></span></th>
+            <th rowspan="2" jhiSortBy="stock"><span jhiTranslate="gateApp.info.stock">Stock</span> <span class="fa fa-sort"></span></th>
+            <th colspan="2" class="row1"><span jhiTranslate="gateApp.info.increase">Increase</span></th>
+            <th rowspan="2" jhiSortBy="sourceTitle"><span jhiTranslate="gateApp.info.source">Source</span> <span class="fa fa-sort"></span></th>
+            <th rowspan="2"></th>
+            </tr>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th class="row2" jhiSortBy="increaseDays" style="min-width:5em"><span jhiTranslate="gateApp.info.increase_days">Days</span> <span class="fa fa-sort"></span></th>
+            <th class="row2" jhiSortBy="increaseTotal"><span jhiTranslate="gateApp.info.increase_total">Total</span> <span class="fa fa-sort"></span></th>
             </tr>
             </thead>
             <tbody>
