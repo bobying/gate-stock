@@ -34,6 +34,10 @@
         {
             "fieldName": "day30",
             "fieldType": "Float"
+        },
+        {
+            "fieldName": "day20",
+            "fieldType": "Float"
         }
     ],
     "changelogDate": "20170930035448",

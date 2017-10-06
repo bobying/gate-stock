@@ -38,7 +38,7 @@
             <th rowspan="2" jhiSortBy="date" style="width:9em"><span jhiTranslate="gateApp.info.date">Date</span> <span class="fa fa-sort"></span></th>
             <th rowspan="2" jhiSortBy="title"><span jhiTranslate="gateApp.info.title">Title</span> <span class="fa fa-sort"></span></th>
             <th rowspan="2" jhiSortBy="stock"><span jhiTranslate="gateApp.info.stock">Stock</span> <span class="fa fa-sort"></span></th>
-            <th colspan="5" class="row1"><span jhiTranslate="gateApp.info.increase">Increase</span></th>
+            <th colspan="6" class="row1"><span jhiTranslate="gateApp.info.increase">Increase</span></th>
             <th rowspan="2" jhiSortBy="sourceTitle"><span jhiTranslate="gateApp.info.source">Source</span> <span class="fa fa-sort"></span></th>
             <th rowspan="2"></th>
             </tr>
@@ -47,6 +47,7 @@
             <th class="row2" jhiSortBy="increaseTotal"><span jhiTranslate="gateApp.info.increase_total">Total</span> <span class="fa fa-sort"></span></th>
             <th class="row2" jhiSortBy="increasedDay5"><span jhiTranslate="gateApp.info.increasedDay5">5th Day</span> <span class="fa fa-sort"></span></th>
             <th class="row2" jhiSortBy="increasedDay10"><span jhiTranslate="gateApp.info.increasedDay10">10th Day</span> <span class="fa fa-sort"></span></th>
+            <th class="row2" jhiSortBy="increasedDay20"><span jhiTranslate="gateApp.info.increasedDay20">20th Day</span> <span class="fa fa-sort"></span></th>
             <th class="row2" jhiSortBy="increasedDay30"><span jhiTranslate="gateApp.info.increasedDay30">30th Day</span> <span class="fa fa-sort"></span></th>
             </tr>
             </thead>
@@ -60,6 +61,7 @@
                 <td>{{info.increaseTotal}}</td>
                 <td>{{info.increasedDay5}}</td>
                 <td>{{info.increasedDay10}}</td>
+                <td>{{info.increasedDay20}}</td>
                 <td>{{info.increasedDay30}}</td>
                 <td>
                     <div *ngIf="info.sourceId">

@@ -9,6 +9,7 @@ export class Judge implements BaseEntity {
         public day5?: number,
         public day10?: number,
         public day30?: number,
+        public day20?: number,
         public infoId?: number,
     ) {
     }
