@@ -27,7 +27,7 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
                 '/v2/api-docs',
                 '/h2-console'
             ],
-            target: 'http://192.168.1.209:9080',
+            target: 'http://139.129.39.128:9080',
             secure: false
         }]
     },

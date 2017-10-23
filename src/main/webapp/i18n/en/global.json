@@ -4,14 +4,14 @@
         "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
         "menu": {
             "home": "Home",
-            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "jhipster-needle-menu-add-element": "JCodegen will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
                 "source": "Source",
                 "tracert": "Tracert",
                 "judge": "Judge",
                 "info": "Info",
-                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+                "jhipster-needle-menu-add-entry": "JCodegen will add additional entities here (do not translate!)"
             },
             "account": {
                 "main": "Account",
@@ -35,7 +35,7 @@
                 "apidocs": "API",
                 "database": "Database",
                 "elasticsearch-reindex": "Reindex Elasticsearch",
-                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+                "jhipster-needle-menu-add-admin-element": "JCodegen will add additional menu entries here (do not translate!)"
             },
             "language": "Language"
         },

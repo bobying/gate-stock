@@ -47,10 +47,6 @@ export class InfoDialogComponent implements OnInit {
         return this.dataUtils.openFile(contentType, field);
     }
 
-    setFileData(event, entity, field, isImage) {
-        this.dataUtils.setFileData(event, entity, field, isImage);
-    }
-
     clear() {
         this.activeModal.dismiss('cancel');
     }
