@@ -22,16 +22,6 @@ node {
         sh "./mvnw com.github.eirslett:frontend-maven-plugin:yarn"
     }
 
-    stage('backend tests') {
-        try {
-            sh "./mvnw test"
-        } catch(err) {
-            throw err
-        } finally {
-            junit '**/target/surefire-reports/TEST-*.xml'
-        }
-    }
-
     stage('frontend tests') {
         try {
             sh "./mvnw com.github.eirslett:frontend-maven-plugin:yarn -Dfrontend.yarn.arguments='test -u'"
@@ -51,7 +41,7 @@ node {
     stage('build docker') {
         sh "cp -R src/main/docker target/"
         sh "cp target/*.war target/docker/"
-        dockerImage = docker.build('cloud/gate', 'target/docker')
+        dockerImage = docker.build('cloud/gate-stock', 'target/docker')
     }
 
     stage('publish docker') {
